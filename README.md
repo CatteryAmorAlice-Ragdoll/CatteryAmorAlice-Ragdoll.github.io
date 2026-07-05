@@ -19,5 +19,5 @@ Next.jsの静的出力をこのリポジトリ直下に同期しています。
 
 ## Form
 
-- The visit request form posts through FormSubmit to `cattery227.amor.alice@gmail.com`.
-- FormSubmit requires the recipient mailbox to approve the first confirmation email before live submissions are delivered.
+- 見学申し込みフォームはFormSubmit経由で `cattery227.amor.alice@gmail.com` に届く構成です。
+- 初回送信時はFormSubmitから確認メールが届くため、受信側で承認が必要です。
