@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://catteryamoralice-ragdoll.github.io/sitemap.xml
