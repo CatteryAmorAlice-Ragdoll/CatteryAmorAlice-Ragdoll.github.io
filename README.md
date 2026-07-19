@@ -22,6 +22,8 @@ Next.jsの静的出力をこのリポジトリ直下に同期しています。
 
 - `graduates/` の複数写真は、`assets/graduates-autoscroll.css` と `assets/graduates-autoscroll.js` で横スクロール・自動送りにしています。
 - Next.jsの静的出力を再同期するときは、上記2ファイルと `graduates/index.html` の読み込みタグを残してください。
+- `kittens/` の募集カードは、`assets/kittens-listing.css` と `assets/kittens-listing.js` で公開後に差し込んでいます。
+- 子猫カードを更新するときは、上記2ファイル、掲載用の `assets/kitten-*.jpg`、各HTMLの読み込みタグを残してください。
 
 ## Form
 
