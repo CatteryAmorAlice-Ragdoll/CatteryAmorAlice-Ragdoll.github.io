@@ -1,3 +1,17 @@
+.kittens-section .kitten-status-grid,
+.kittens-section .feature-photo {
+  display: none !important;
+}
+
+.kittens-section .kittens-layout {
+  grid-template-columns: minmax(0, 1fr) !important;
+}
+
+.kittens-section .kittens-copy {
+  width: min(60rem, 100%);
+  margin-inline: auto;
+}
+
 .kitten-listing-shell {
   display: grid;
   gap: 4rem;

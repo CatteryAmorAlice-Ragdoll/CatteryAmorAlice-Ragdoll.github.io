@@ -221,21 +221,16 @@
     return shell;
   }
 
-  function updateStatus() {
-    const items = document.querySelectorAll(".kitten-status-grid > div");
-    if (items.length < 3) return;
+  function simplifyOverview() {
+    const overview = document.querySelector(".kittens-section");
+    if (!overview) return;
 
-    const availableCount = items[0].querySelector("strong");
-    const preparationCount = items[2].querySelector("strong");
-    const preparationLabel = items[2].querySelector("span");
-
-    if (availableCount) availableCount.textContent = "10";
-    if (preparationCount) preparationCount.textContent = "10匹掲載中";
-    if (preparationLabel) preparationLabel.textContent = "7月18日撮影";
+    overview.querySelector(".kitten-status-grid")?.remove();
+    overview.querySelector(".feature-photo")?.remove();
   }
 
   function enhancePage() {
-    updateStatus();
+    simplifyOverview();
 
     if (document.querySelector("[data-kitten-listing='true']")) return;
     const emptyCard = document.querySelector(".kitten-empty-card");
