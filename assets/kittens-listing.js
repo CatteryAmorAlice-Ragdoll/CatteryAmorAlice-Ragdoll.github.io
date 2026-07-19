@@ -176,7 +176,7 @@
   let scheduled = 0;
   function scheduleEnhancement() {
     window.clearTimeout(scheduled);
-    scheduled = window.setTimeout(enhancePage, 60);
+    scheduled = window.setTimeout(enhancePage, 700);
   }
 
   const observer = new MutationObserver(scheduleEnhancement);
@@ -188,5 +188,5 @@
     scheduleEnhancement();
   }
 
-  window.setTimeout(enhancePage, 800);
+  window.setTimeout(enhancePage, 1400);
 })();
