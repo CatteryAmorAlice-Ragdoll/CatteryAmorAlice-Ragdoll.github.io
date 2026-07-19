@@ -105,16 +105,62 @@
   pointer-events: none;
 }
 
-.kitten-listing-photo img {
-  display: block;
+.kitten-listing-photo-track {
+  display: flex;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: transform 0.55s ease;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  touch-action: pan-x pan-y;
 }
 
-.kitten-listing-card:hover .kitten-listing-photo img {
-  transform: scale(1.025);
+.kitten-listing-photo-track::-webkit-scrollbar {
+  display: none;
+}
+
+.kitten-listing-photo-track:focus-visible {
+  outline: 3px solid rgba(199, 160, 91, 0.9);
+  outline-offset: -3px;
+}
+
+.kitten-listing-photo-track img {
+  display: block;
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.kitten-listing-photo-status {
+  position: absolute;
+  right: 0.8rem;
+  bottom: 0.75rem;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.42rem 0.65rem;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: 999px;
+  background: rgba(16, 22, 33, 0.72);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 850;
+  letter-spacing: 0.04em;
+  pointer-events: none;
+  backdrop-filter: blur(8px);
+}
+
+.kitten-listing-photo-status small {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.64rem;
+  font-weight: 700;
 }
 
 .kitten-listing-body {
@@ -246,7 +292,11 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .kitten-listing-photo img,
+  .kitten-listing-photo-track {
+    scroll-behavior: auto;
+  }
+
+  .kitten-listing-photo-track,
   .kitten-listing-cta {
     transition: none;
   }
