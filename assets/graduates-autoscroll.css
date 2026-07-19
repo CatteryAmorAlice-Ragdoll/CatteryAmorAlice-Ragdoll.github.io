@@ -1,0 +1,89 @@
+.graduate-scroll-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(199, 160, 91, 0.72) rgba(255, 255, 255, 0.2);
+  -webkit-overflow-scrolling: touch;
+}
+
+.graduate-scroll-track::-webkit-scrollbar {
+  height: 6px;
+}
+
+.graduate-scroll-track::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.graduate-scroll-track::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgba(199, 160, 91, 0.82);
+}
+
+.graduate-letter-card .graduate-scroll-track img {
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 100%;
+  height: 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  object-fit: cover;
+}
+
+.graduate-scroll-status {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin: 0;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 999px;
+  background: rgba(251, 247, 239, 0.88);
+  box-shadow: 0 14px 38px rgba(16, 22, 33, 0.16);
+  color: var(--deep);
+  pointer-events: none;
+  backdrop-filter: blur(14px);
+}
+
+.graduate-scroll-status span {
+  color: var(--night);
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+}
+
+.graduate-scroll-status small {
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 720px) {
+  .graduate-scroll-status {
+    right: 0.75rem;
+    bottom: 0.75rem;
+    left: 0.75rem;
+    padding: 0.58rem 0.75rem;
+  }
+
+  .graduate-scroll-status small {
+    font-size: 0.7rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .graduate-scroll-track {
+    scroll-behavior: auto;
+  }
+}
